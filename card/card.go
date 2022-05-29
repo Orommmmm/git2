@@ -1,20 +1,21 @@
 package card
 
 import (
+	"fmt"
 	"orom/types"
 )
 
 func Vvod() types.Card {
 	card := types.Card{
 		ID:       0,
-		PAN:      "5050 xxxx xxxx 6969",
+		PAN:      "5050 xxxx xxxx 0001",
 		Currency: "TJS",
-		Color:    "Gold",
-		Name:     "Boozoorg",
-		Balance:  20000,
+		Color:    "Platinum",
+		Name:     "Orom",
+		Balance:  60000,
 		Active:   true,
 	}
-	return Withdraw(&card)
+	fmt.Println(Withdraw(&card))
 }
 
 func Withdraw(card *types.Card) types.Card {
